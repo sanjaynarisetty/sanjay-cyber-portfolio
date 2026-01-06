@@ -4,134 +4,200 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sanjay Narisetty | Cybersecurity Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #0f172a;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #020617, #0f172a);
       color: #e5e7eb;
-      line-height: 1.6;
+      line-height: 1.7;
     }
     header {
-      background: linear-gradient(135deg, #020617, #020617);
-      padding: 60px 20px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 40px 20px;
+      background: radial-gradient(circle at top, #1e293b, #020617);
     }
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 15px;
     }
     header p {
-      font-size: 1.1rem;
-      max-width: 700px;
+      max-width: 750px;
+      font-size: 1.15rem;
+      color: #c7d2fe;
       margin: auto;
-      color: #cbd5f5;
+    }
+    .cta {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-weight: 600;
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      color: #020617;
+      text-decoration: none;
+      transition: transform .3s, box-shadow .3s;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(56,189,248,.4);
     }
     section {
-      padding: 50px 20px;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
+      padding: 90px 20px;
     }
     h2 {
-      border-left: 4px solid #38bdf8;
-      padding-left: 12px;
-      margin-bottom: 20px;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      border-left: 5px solid #38bdf8;
+      padding-left: 15px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
     }
     .card {
-      background-color: #020617;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      background: rgba(2,6,23,.9);
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.45);
+      transition: transform .3s;
     }
-    ul {
-      padding-left: 20px;
-    }
-    a {
-      color: #38bdf8;
-      text-decoration: none;
+    .card:hover { transform: translateY(-6px); }
+    ul { padding-left: 20px; }
+    img {
+      width: 100%;
+      border-radius: 14px;
+      margin-top: 15px;
     }
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #020617;
+      padding: 30px;
+      background: #020617;
       color: #94a3b8;
     }
-    img.project-image {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-top: 15px;
-      margin-bottom: 15px;
-    }
+    a { color: #38bdf8; text-decoration: none; }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Sanjay Narisetty</h1>
-  <p>Aspiring SOC Analyst | Cybersecurity Student | CompTIA Network+ | Open to Internships & Entry-Level Roles</p>
+<header data-aos="fade-up">
+  <div>
+    <h1>Sanjay Narisetty</h1>
+    <p>
+      Aspiring SOC Analyst | Cybersecurity Student | CompTIA Network+ | Actively Seeking Internships & Entry-Level Roles
+    </p>
+    <div class="cta">
+      <a class="btn" href="#projects">View Labs</a>
+      <a class="btn" href="#blog">Read Blog</a>
+      <a class="btn" href="#contact">Contact Me</a>
+    </div>
+  </div>
 </header>
 
-<section>
+<section data-aos="fade-right">
   <h2>About Me</h2>
   <div class="card">
     <p>
-      I am a cybersecurity student actively preparing for a career in Security Operations (SOC). I focus on building strong foundations in network security, log analysis, and incident response through hands-on labs and continuous learning.
+      I am a cybersecurity student focused on building a strong foundation in networking, SOC operations, and log analysis.
+      My goal is to start my career as a SOC Analyst through internships and entry-level roles by combining certifications,
+      hands-on labs, and continuous learning.
     </p>
   </div>
 </section>
 
-<section>
-  <h2>Skills</h2>
-  <div class="card">
-    <ul>
-      <li>Network Fundamentals (TCP/IP, OSI, DNS, HTTP)</li>
-      <li>SIEM & Log Analysis (Microsoft Sentinel – Beginner)</li>
-      <li>Incident Response Fundamentals</li>
-      <li>Windows & Linux Logs</li>
-      <li>CompTIA Network+ (In Progress)</li>
-    </ul>
+<section data-aos="fade-left">
+  <h2>Core Skills</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Networking</h3>
+      <ul>
+        <li>OSI & TCP/IP Models</li>
+        <li>Ports, Protocols, DNS, HTTP/S</li>
+        <li>Traffic Flow & Troubleshooting</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>SOC Fundamentals</h3>
+      <ul>
+        <li>Log Analysis</li>
+        <li>Incident Response Basics</li>
+        <li>Alert Investigation</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Tools</h3>
+      <ul>
+        <li>Microsoft Sentinel (Beginner)</li>
+        <li>Windows & Linux Logs</li>
+        <li>GitHub & Documentation</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<section>
+<section id="projects" data-aos="zoom-in">
   <h2>Projects & Labs</h2>
-  <div class="card">
-    <h3>SOC Home Lab – Microsoft Sentinel</h3>
-    <p>
-      Built a basic SOC-style lab to collect and analyze Windows & Linux logs, understand alerts, and explore how SIEM tools support threat detection.
-    </p>
-    <img class="project-image" src="https://raw.githubusercontent.com/yourusername/sanju-cyber-portfolio/main/sentinel-lab.png" alt="SOC Lab Screenshot">
-  </div>
-
-  <div class="card">
-    <h3>Network+ Learning Labs</h3>
-    <p>
-      Hands-on practice with networking concepts such as OSI model, ports, protocols, and network troubleshooting from a security perspective.
-    </p>
-    <img class="project-image" src="https://raw.githubusercontent.com/yourusername/sanju-cyber-portfolio/main/network-plus.png" alt="Network+ Lab Screenshot">
+  <div class="grid">
+    <div class="card">
+      <h3>SOC Home Lab – Microsoft Sentinel</h3>
+      <p>
+        Built a SOC-style environment to ingest Windows and Linux logs, analyze alerts, and understand how SIEM tools
+        support threat detection and investigation.
+      </p>
+      <img src="sentinel-lab.png" alt="Sentinel Lab">
+    </div>
+    <div class="card">
+      <h3>Network+ Learning Labs</h3>
+      <p>
+        Hands-on learning focused on OSI layers, IP addressing, ports, protocols, and how networking knowledge supports
+        cybersecurity operations.
+      </p>
+      <img src="network-plus.png" alt="Network+ Labs">
+    </div>
   </div>
 </section>
 
-<section>
+<section id="blog" data-aos="fade-up">
   <h2>Blog & Learning</h2>
   <div class="card">
     <p>
-      I document my cybersecurity learning journey through blog posts focused on Network+, SOC concepts, and hands-on labs.
+      I document my cybersecurity journey, certification preparation, and lab experience to show consistent growth
+      and real understanding of SOC fundamentals.
     </p>
     <p>
-      👉 <a href="https://medium.com/@sanjaynarisetty2003/d473bd07640a">Read my first blog</a>
+      👉 <a href="https://medium.com/@sanjaynarisetty2003/d473bd07640a" target="_blank">Read my first blog on Medium</a>
     </p>
   </div>
 </section>
 
-<section>
+<section id="contact" data-aos="fade-up">
   <h2>Contact</h2>
   <div class="card">
     <p>
-      📧 Email: your-email@example.com<br />
-      🔗 LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a><br />
-      💻 GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a>
+      📧 Email: your-email@example.com<br>
+      🔗 LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a><br>
+      💻 GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
     </p>
   </div>
 </section>
@@ -139,6 +205,11 @@
 <footer>
   <p>© 2026 Sanju | Cybersecurity Portfolio</p>
 </footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
 
 </body>
 </html>
